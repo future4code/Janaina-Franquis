@@ -56,6 +56,7 @@ div.drink-bar img {
   margin: 0 auto;
 }
 
+
 .table-product{
   padding: 10px;
   border: solid grey;
@@ -67,11 +68,9 @@ div.drink-bar img {
   background-color: burlywood;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  border: 2px solid grey;
-  height: 70px;
-  width: 100%;
+  border: 3px solid red;
+  padding: 50px;
   
-
 }
 
 .table-product td{
@@ -83,6 +82,7 @@ div.drink-bar img {
   display: block;
   margin: 19px;
 }
+
 
 footer{
   
