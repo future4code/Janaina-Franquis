@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(207, 204, 204);
+    font-family: Open Sans, sans-serif;
+    margin: 100px;
+}
+
+body h1{
+    font-family:'Bangers', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+}
+
+div.slogan p{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    text-align:center;
+    margin:0 0 20px;
+    margin-bottom: 0;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h2{
+    font-size:20px;
+    color: red;
+}
+
+p{
+    font-size: 14px;
+}
+
+div.drink-bar img{
+    display: block;
+    position: absolute;
+    right: 90px;
+    top:105px
+}
+
+.principal a{
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top:10px;
+}
+
+/*cor menu*/
+.principal{
+    background:rgb(75, 73, 73);
+    height: 60px;
+    height: 40px;
+    max-width: 100%;  
+}
+
+ul {
+    list-style-type: none;
+    line-height: 2;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #99ffff;
+    font: 700;
+  }
+
+.principal li{
+    display: inline-block;
+    line-height: 2.5;
+    margin: 0 500px;
+}
