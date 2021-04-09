@@ -12,13 +12,13 @@ body {
 h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 60px;
-    color: ;
+    color:#2874A6 ;
     text-align: center;
     margin:5px;
     padding: 5px;
     position: absolute;
-    top: 100px;
-    right: 700px;
+    top: 350px;
+    left: 180px;
 
 }
 
@@ -28,14 +28,13 @@ h3 {
     margin: 5px;
     text-align:center ;
     position: absolute;
-    top: 170px;
-    right: 750px;
+    top: 430px;
+    left: 180px;
 }
 
 nav{
-    
     position: absolute;
-    top:20px;
+    top:50px;
    
 }
 
@@ -59,8 +58,7 @@ nav a { /* visual do menu*/
 .background-image{
    margin:auto;
    padding:auto;
-   width: 500%;
-   position: fixed;
+   position: absolute;
    top: 250px;
    left: 900px;
    /*right: 10px;*/
@@ -68,7 +66,7 @@ nav a { /* visual do menu*/
 /* botão learn-more*/
 .learn-more {
     position: absolute;
-    top: 480px;
+    top: 500px;
     left: 200px;
     font-family:'Nunito', sans-serif;
     color:white;
@@ -82,9 +80,8 @@ button{
     border-radius:50px;
     display:inline-block;
     cursor:pointer;
-    padding:8px 25px;
+    padding:8px 45px;
     text-decoration:none;
-    
 }
 
 
@@ -95,7 +92,9 @@ button{
 }
 
 .social-icons  img{
-    margin: 10px;
+    margin: 20px;
     width: 40px;
+  
+
 }
 
