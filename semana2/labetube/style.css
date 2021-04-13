@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 140px;
+    padding: 8px;
+    margin-top: 10px;
+   
+}
+
+header{
+    background-color:rgb(218, 218, 218);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 10px;
+    height: 90px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(218, 218, 218);
+    height: 60px;
+    grid-column: 1/-1;
+}
+
+.icone{
+    width: 50px;
+    margin: 0 20px 20px 0 ;
+}
+
+nav{
+    background-color: rgb(218, 218, 218);
+    width: 200px;
+    padding: 10px;
+}
+
+.button-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-play{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 5px green;
+    text-align: center;
+    
+    
+}
+
+video{
+width: 100%;
+}
+ 
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 40px;
+    column-gap: 30px;
+    margin: 30px;
+}
+
+
+
