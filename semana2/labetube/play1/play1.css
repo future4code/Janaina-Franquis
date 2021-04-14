@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+img {
+  width: 140px;
+  padding: 8px;
+}
+
+header {
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 218, 218);
+  height: 60px;
+}
