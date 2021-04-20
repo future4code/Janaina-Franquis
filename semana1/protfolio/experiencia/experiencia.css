@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+nav {
+  position: absolute;
+  top: 50px;
+}
+
+nav li {
+  display: inline; /*colocar texto menu um do lado do outro*/
+  margin: 0 0 0 100px; /*espaçamento entre textos*/
+}
+
+nav a {
+  /* visual do menu*/
+
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.photo-experience {
+  position: absolute;
+  margin-left: 110px;
+  left: 50px;
+  top: 150px;
+  border-radius: 300px;
+  border: 10px solid #2874a6;
+}
+
+.about-me {
+  /*texto sobre */
+  margin: 10px;
+  position: relative;
+  margin-top: 180px;
+  margin-left: 500px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.about-me h2 {
+  margin: 10px;
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+}
+
+.about-me p {
+  margin: 10px;
+  padding: 5px;
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+}
+
+.experience h2,
+h3 {
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 5px;
+  position: relative;
+  top: 80px;
+  left: 180px;
+}
+.experience h4 {
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 5px;
+  position: relative;
+  top: 100px;
+  left: 180px;
+}
+
+.experience p {
+  margin: 5px;
+  padding: 5px;
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  top: 25px;
+  left: 170px;
+}
+
+.experience ul {
+  margin: 10px;
+  padding: 5px;
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  top: 50px;
+  left: 200px;
+}
+
+.academic-education h2,
+h3 {
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 5px;
+  position: relative;
+  top: 80px;
+  left: 180px;
+}
+
+.academic-education h4 {
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 5px;
+  position: relative;
+  top: 100px;
+  left: 180px;
+}
+
+.academic-education p {
+  margin: 5px;
+  padding: 5px;
+  color: #2874a6;
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  top: 45px;
+  left: 170px;
+}
+
+.background-image {
+  position: absolute;
+  left: 800px;
+}
