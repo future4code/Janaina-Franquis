@@ -11,7 +11,7 @@
  * 
  */
 let bemVindo = alert("Bem vindes ao jogo de BlackJack! ")
-let inicio = window.confirm("Quer iniciar uma nova rodada?")
+let inicio = confirm("Quer iniciar uma nova rodada?")
 let cartas = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10 , "J" ,"Q" ,"K" ]
 let naipes = ["Copas","Paus","Ouros", "Espadas"];
 const sorteioDeCartas = console.log(cartas[Math.random(0, cartas.length)])
