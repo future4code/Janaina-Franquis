@@ -18,23 +18,23 @@ const newPost = {
     image: imageBlog.value
 }
 
-
-
-
 /* Ao preencher o formulário, adicione o objeto criado no passo acima a um array de objetos e limpe os campos do formulário. Para testar, faça com que o array seja impresso no console.*/
-const galleryPost = [titleBlog, authorBlog, contentBlog, imageBlog]; //Limpar formulário
-galleryPost[0].value = "";
-galleryPost[1].value = "";
-galleryPost[2].value = "";
-galleryPost[3].value = "";
 
+const galleryPost = []; // 
+galleryPost.push(newPost);
+
+// limpar campos do formulário.
+document.getElementById("titulo-post").value = ''
+document.getElementById("autor-post").value = ''
+document.getElementById("conteudo-post").value = ''
+document.getElementById("imagem-post").value = ''
+document.getElementById("descricao-imagem-post").value = ''
 
 /* Na mesma página, crie uma seção no HTML que será responsável por mostrar os posts. Pode ser uma div ou uma section, por exemplo. */
 /* Crie uma função responsável por inserir os posts no HTML. Não se preocupe com a aparência, garanta que os dados estão sendo exibido */
-function name(params) {
-    
-}
-
+let titlePost = `<h1>${galleryPost[galleryPost.length - 1].title}</h1>`
+let authorPost = `<h3>Por: ${galleryPost[galleryPost.length - 1].author}</h3>`
+let contentPost = `<p>${galleryPost[galleryPost.length - 1].content}</p>`
 
 
 /* Adicione a propriedade "imagem" ao formulário do post. */
