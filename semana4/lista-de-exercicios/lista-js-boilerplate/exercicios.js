@@ -39,9 +39,15 @@ function retornaNumerosPares(array) {
 }
 
 //Exercício 4
-
+//Escreva uma função que receba um array de números e retorne o maior número dele.
 function retornaMaiorNumero(array) {
-  // implemente sua lógica aqui
+   let numeroMaior = 0
+   for(let i of array){
+      if (numeroMaior < i){
+         numeroMaior = i
+      }
+   }
+   return numeroMaior
 }
 
 //Exercício 5
