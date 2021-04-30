@@ -293,5 +293,12 @@ const contas = [
   individual de cada um, sem criar um novo array. Retorne o array original.  */
 
 function atualizaSaldo() {
-  // implemente sua lógica aqui
+  contas.forEach((conta) => {
+    if (conta.compras.length !== 0) {
+      conta.saldoTotal = conta.compras.reduce((acc, curr) => {
+        return acc - curr;
+      }, conta.saldoTotal);
+    }
+  });
+  return contas;
 }
