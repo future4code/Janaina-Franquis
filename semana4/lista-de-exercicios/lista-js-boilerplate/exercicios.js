@@ -119,8 +119,11 @@ function segundoMaiorEMenor(array) {
 //Exercício 11
 //Escreva uma função que recebe um array e retorne um array com eles em ordem crescente.
 function ordenaArray(array) {
-  // implemente sua lógica aqui
-}
+      return array.sort((a, b) => {
+      return a - b;
+    });
+  }
+
 
 // Exercício 12
 
@@ -146,8 +149,8 @@ function criaRetangulo(lado1, lado2) {
    ANÔNIMO no lugar do nome.  */
 function anonimizaPessoa(pessoa) {}
 
-// Exercício 16
 
+// Exercício 16
 const arrayDePessoas = [
   { nome: "Pedro", idade: 20 },
   { nome: "João", idade: 10 },
@@ -172,25 +175,31 @@ function maioresDe18(arrayDePessoas) {
   }
 
 
-// Exercício 17, letra A
+// Exercício 17:  todos os itens deste exercício, 
+//você terá que escrever uma função cuja entrada seja um array. Para testes, considere: const array = [1, 2, 3, 4, 5, 6] 
 
+//Letra A
+//Escreva uma função que retorne um array com as entradas multiplicadas por 2. Isto é [2, 4, 6, 8, 10, 12].
 function multiplicaArrayPor2(array) {
   // implemente sua lógica aqui
 }
 
-// Exercício 17, letra B
-
+//Exercício 17, letra B
+//Escreva uma função que retorne um array com as entradas multiplicadas por 2 e como strings. Isto é: ["2", "4", "6", "8", "10", "12"]
 function multiplicaArrayPor2S(array) {
   // implemente sua lógica aqui
 }
 
 // Exercício 17, letra C
-
+//Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar". 
+//Isto é: ["1 é impar", "2 é par", "3 é impar", "4 é par", "5 é impar", "6 é par"]
 function verificaParidade(array) {
   // implemente sua lógica aqui
 }
 
+
 // Exercício 18
+
 
 const pessoas = [
   { nome: "Paula", idade: 12, altura: 1.8 },
