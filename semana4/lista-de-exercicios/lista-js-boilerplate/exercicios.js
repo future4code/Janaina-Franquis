@@ -219,6 +219,10 @@ function verificaParidade(array) {
 }
 
 // Exercício 18
+/*Imagine que você trabalhe num parque de diversões, como desenvolvedor(a). As suas tarefas são sempre com o intuito de 
+  ajudar a automação de alguns processos internos do parque. Uma das atrações principais dele é a montanha russa do terror.
+  As filas são muito grandes e todas as pessoas de várias idades insistem entrar no brinquedo, mesmo sabendo que não podem. 
+  Considere, então, essas pessoas: */
 
 const pessoas = [
   { nome: "Paula", idade: 12, altura: 1.8 },
@@ -229,16 +233,22 @@ const pessoas = [
   { nome: "Soter", idade: 70, altura: 1.9 },
 ];
 
-//Exercício 18, letra A
-
+// Letra A
+//Escreva uma função que receba este array e devolva outro array somente com as pessoas que tem permissão para entrar no brinquedo
 function retornaPessoasAutorizadas() {
-  // implemente sua lógica aqui
+  return pessoas.filter((pessoa) => {
+    const { idade, altura } = pessoa;
+    return idade >= 14 && idade < 60 && altura >= 1.5;
+  });
 }
 
-// Exercício 18, letra B
-
+// Letra B
+// Escreva uma função que receba este array e devolva outro array somente com as pessoas que não podem entrar no brinquedo.
 function retornaPessoasNaoAutorizadas() {
-  // implemente sua lógica aqui
+  return pessoas.filter((pessoa) => {
+    const { idade, altura } = pessoa;
+    return idade < 14 || idade > 60 || altura < 1.5;
+  });
 }
 
 //Exercício 19
