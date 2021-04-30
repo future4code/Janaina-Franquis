@@ -51,9 +51,10 @@ function retornaMaiorNumero(array) {
 }
 
 //Exercício 5
+//Escreva uma função que recebe um array como parâmetro e retorna a quantidade de elementos que há nele.
 
 function retornaQuantidadeElementos(array) {
-  // implemente sua lógica aqui
+  return array.length
 }
 
 //Exercício 6
