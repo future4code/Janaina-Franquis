@@ -11,9 +11,18 @@ function inverteArray(array) {
 }
 
 //Exercício 2
+//Escreva uma função que recebe um array de números e retorna um array com os números pares elevados a 2.
 
 function retornaNumerosParesElevadosADois(array) {
-  // implemente sua lógica aqui
+ const arrayParesElevador = []
+ let paresElevador
+ for(let i of array){
+    if(i%2 ===0){
+       paresElevador =i*i
+       arrayParesElevador.push(paresElevador)
+    }
+ } 
+ return arrayParesElevador
 }
 
 //Exercício 3
