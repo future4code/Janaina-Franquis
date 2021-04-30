@@ -119,16 +119,33 @@ function segundoMaiorEMenor(array) {
 //Exercício 11
 //Escreva uma função que recebe um array e retorne um array com eles em ordem crescente.
 function ordenaArray(array) {
-      return array.sort((a, b) => {
-      return a - b;
-    });
-  }
-
+  return array.sort((a, b) => {
+    return a - b;
+  });
+}
 
 // Exercício 12
-
+/*Crie uma função que retorne um objeto que representa o filme favorito do Astrodev. 
+Ele deve ter as propriedades: nome, ano, diretor e atores, sendo que filme e diretor 
+devem ser strings, ano deve ser um number e atores deve ser um array de strings.
+ As informações (que são os valores das propriedades) do filme são: */
 function filmeFavorito() {
-  // implemente sua lógica aqui
+  const nome = "O Diabo Veste Prada";
+  const ano = 2006;
+  const diretor = "David Frankel";
+  const atores = [
+    "Meryl Streep",
+    "Anne Hathaway",
+    "Emily Blunt",
+    "Stanley Tucci",
+  ];
+
+  return {
+    nome,
+    ano,
+    diretor,
+    atores,
+  };
 }
 
 // Exercício 13
@@ -149,7 +166,6 @@ function criaRetangulo(lado1, lado2) {
    ANÔNIMO no lugar do nome.  */
 function anonimizaPessoa(pessoa) {}
 
-
 // Exercício 16
 const arrayDePessoas = [
   { nome: "Pedro", idade: 20 },
@@ -168,15 +184,14 @@ function maioresDe18(arrayDePessoas) {
 
 // Exercício 16, letra B
 // Faça uma função que retorne um novo array só com as crianças/adolescentes (pessoas com idade inferior a 20)
-  function menoresDe18(arrayDePessoas) {
-    return arrayDePessoas.filter((pessoa) => {
-      return pessoa.idade < 20;
-    });
-  }
+function menoresDe18(arrayDePessoas) {
+  return arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade < 20;
+  });
+}
 
-
-// Exercício 17:  todos os itens deste exercício, 
-//você terá que escrever uma função cuja entrada seja um array. Para testes, considere: const array = [1, 2, 3, 4, 5, 6] 
+// Exercício 17:  todos os itens deste exercício,
+//você terá que escrever uma função cuja entrada seja um array. Para testes, considere: const array = [1, 2, 3, 4, 5, 6]
 
 //Letra A
 //Escreva uma função que retorne um array com as entradas multiplicadas por 2. Isto é [2, 4, 6, 8, 10, 12].
@@ -191,15 +206,13 @@ function multiplicaArrayPor2S(array) {
 }
 
 // Exercício 17, letra C
-//Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar". 
+//Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar".
 //Isto é: ["1 é impar", "2 é par", "3 é impar", "4 é par", "5 é impar", "6 é par"]
 function verificaParidade(array) {
   // implemente sua lógica aqui
 }
 
-
 // Exercício 18
-
 
 const pessoas = [
   { nome: "Paula", idade: 12, altura: 1.8 },
