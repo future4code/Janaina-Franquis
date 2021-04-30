@@ -76,34 +76,45 @@ function retornaExpressoesBooleanas() {
 }
 
 //Exercício 7
-//Escreva uma função que, recebendo um número N como parâmetro, 
-//retorne os N primeiros números pares (por exemplo, se N for 3, 
-//você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8). 
+//Escreva uma função que, recebendo um número N como parâmetro,
+//retorne os N primeiros números pares (por exemplo, se N for 3,
+//você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8).
 
 function retornaNNumerosPares(n) {
-  const vetor = []
-  for (let i = 0; i < n; i++){
-    vetor.push(i*2)
+  const vetor = [];
+  for (let i = 0; i < n; i++) {
+    vetor.push(i * 2);
   }
-  return vetor
+  return vetor;
 }
 
 // Exercício 8
+/* Vocês lembram de trigonometria? (Oh, não, trigonometria). Relaxem. 
+O exercício é simples, mas mexe com isso. Veja bem: quando nos ensinam triângulos
+(uma figura de três lados), nós aprendemos como classifica-los dependendo do tamanho de seus lados. 
+um triângulo possuir os três lados iguais, ele é chamado de "Equilátero". Se possuir,
+dois (e somente 2) lados iguais, diz-se que ele é "Isósceles". Se os três lados tiverem medidas diferentes, 
+ele é "Escaleno". Faça uma função que receba como parâmetro os tamanhos dos três lados do 
+triângulo: a, b, c e retorne se ele é equilátero, isósceles ou escaleno. */
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
 }
 
 // Exercício 9
-
+//Escreva uma função que, dado dois números, retorne um objeto indicando:
 function comparaDoisNumeros(num1, num2) {
   // implemente sua lógica aqui
 }
 
 // Exercício 10
-
+//Escreva uma função que receba um array de números e retorne um novo array com apenas 2 valores (NESTA ORDEM):
+//o segundo maior e o segundo menor número do array original. (Desafio: tentem fazer sem usar função de ordenação de array.)
 function segundoMaiorEMenor(array) {
-  // implemente sua lógica aqui
+  const ordenado = array.sort((a, b)=>{
+    return b-a;
+  })
+  return [ordenado[1], ordenado[ordenado.length-2]]
 }
 
 //Exercício 11
