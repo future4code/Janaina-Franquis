@@ -41,26 +41,38 @@ function retornaNumerosPares(array) {
 //Exercício 4
 //Escreva uma função que receba um array de números e retorne o maior número dele.
 function retornaMaiorNumero(array) {
-   let numeroMaior = 0
-   for(let i of array){
-      if (numeroMaior < i){
-         numeroMaior = i
-      }
-   }
-   return numeroMaior
+  let numeroMaior = 0;
+  for (let i of array) {
+    if (numeroMaior < i) {
+      numeroMaior = i;
+    }
+  }
+  return numeroMaior;
 }
 
 //Exercício 5
 //Escreva uma função que recebe um array como parâmetro e retorna a quantidade de elementos que há nele.
 
 function retornaQuantidadeElementos(array) {
-  return array.length
+  return array.length;
 }
 
 //Exercício 6
+// Para este exercícios considere as variáveis:
+const booleano1 = true;
+const booleano2 = false;
+const booleano3 = !booleano2;
+const booleano4 = !booleano3;
 
 function retornaExpressoesBooleanas() {
-  // implemente sua lógica aqui
+  const respostaA = false;
+  const respostaB = false;
+  const respostaC = true;
+  const respostaD = true;
+  const respostaE = true;
+
+  const resultado = [respostaA, respostaB, respostaC, respostaD, respostaE];
+  return resultado;
 }
 
 //Exercício 7
