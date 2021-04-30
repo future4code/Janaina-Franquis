@@ -149,9 +149,15 @@ function filmeFavorito() {
 }
 
 // Exercício 13
-
+/*Crie uma função que retorne a seguinte string, baseada nos valores do objeto que representa o filme 
+  favorito do Astrodev no penúltimo exercício feito:
+  Venha assistir ao filme NOME DO FILME, de ANO, dirigido por DIRETOR(A) e estrelado por ATOR 1, ATRIZ 2,
+  ATOR n. A string deve ser impressa acessando os valores do objeto */
 function imprimeChamada() {
-  // implemente sua lógica aqui
+  const { nome, ano, diretor, atores } = filmeFavorito();
+  return `Venha assistir ao filme ${nome}, de ${ano}, dirigido por ${diretor} e estrelado por ${atores.join(
+    ", "
+  )}.`;
 }
 
 // Exercício 14
