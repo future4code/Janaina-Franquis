@@ -96,7 +96,6 @@ um triângulo possuir os três lados iguais, ele é chamado de "Equilátero". Se
 dois (e somente 2) lados iguais, diz-se que ele é "Isósceles". Se os três lados tiverem medidas diferentes, 
 ele é "Escaleno". Faça uma função que receba como parâmetro os tamanhos dos três lados do 
 triângulo: a, b, c e retorne se ele é equilátero, isósceles ou escaleno. */
-
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
 }
@@ -111,14 +110,14 @@ function comparaDoisNumeros(num1, num2) {
 //Escreva uma função que receba um array de números e retorne um novo array com apenas 2 valores (NESTA ORDEM):
 //o segundo maior e o segundo menor número do array original. (Desafio: tentem fazer sem usar função de ordenação de array.)
 function segundoMaiorEMenor(array) {
-  const ordenado = array.sort((a, b)=>{
-    return b-a;
-  })
-  return [ordenado[1], ordenado[ordenado.length-2]]
+  const ordenado = array.sort((a, b) => {
+    return b - a;
+  });
+  return [ordenado[1], ordenado[ordenado.length - 2]];
 }
 
 //Exercício 11
-
+//Escreva uma função que recebe um array e retorne um array com eles em ordem crescente.
 function ordenaArray(array) {
   // implemente sua lógica aqui
 }
@@ -142,10 +141,10 @@ function criaRetangulo(lado1, lado2) {
 }
 
 // Exercício 15
-
-function anonimizaPessoa(pessoa) {
-  // implemente sua lógica aqui
-}
+/* Considere:... Crie uma função que recebe um objeto nesse formato*, com as propriedades de nome, 
+   idade, email e endereco e retorne um novo objeto com as mesmas propriedades, mas com a string 
+   ANÔNIMO no lugar do nome.  */
+function anonimizaPessoa(pessoa) {}
 
 // Exercício 16
 
@@ -157,16 +156,21 @@ const arrayDePessoas = [
 ];
 
 // Exercício 16, letra A
-
+//a) Faça uma função que retorne um novo array só com os adultos (pessoas com idade igual ou superior a 20)
 function maioresDe18(arrayDePessoas) {
-  // implemente sua lógica aqui
+  return arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade >= 20;
+  });
 }
 
 // Exercício 16, letra B
+// Faça uma função que retorne um novo array só com as crianças/adolescentes (pessoas com idade inferior a 20)
+  function menoresDe18(arrayDePessoas) {
+    return arrayDePessoas.filter((pessoa) => {
+      return pessoa.idade < 20;
+    });
+  }
 
-function menoresDe18(arrayDePessoas) {
-  // implemente sua lógica aqui
-}
 
 // Exercício 17, letra A
 
@@ -234,6 +238,10 @@ const consultasData = [
 function ordenaPorData() {}
 
 //Exercício 20
+/*Agora, pediram para você ajudar a fazer uma funcionalidade de um banco digital. Antes de explicar a sua tarefa, 
+  você precisa entender como eles guardam as contas dos clientes.
+  Basicamente, eles salvam o nome do clientes, o saldo total e uma lista contendo todas as 
+  compras realizadas pelo cliente. Veja abaixo:*/
 
 const contas = [
   { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
@@ -243,6 +251,8 @@ const contas = [
   { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
   { cliente: "Soter", saldoTotal: 1200, compras: [] },
 ];
+/*A sua tarefa é: faça uma função que manipule um array com os objetos do tipo acima e atualize o saldo total
+  individual de cada um, sem criar um novo array. Retorne o array original.  */
 
 function atualizaSaldo() {
   // implemente sua lógica aqui
