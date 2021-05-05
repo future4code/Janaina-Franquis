@@ -23,14 +23,14 @@ function App() {
         />
       </div>
 
-      <div className="little-container">
+      <div className="page-section-container">
         <h2>Contato</h2>
         <CardPequeno 
-          imagem="https://www.flaticon.com/br/icone-gratis/o-email_747314" 
+          //imagem="https://www.flaticon.com/br/icone-gratis/o-email_747314" 
           email="E-mail: janainafranquis@hotmail.com" 
           />
            <CardPequeno 
-          imagem="https://image.flaticon.com/icons/png/128/1239/1239525.png" 
+          //imagem="https://image.flaticon.com/icons/png/128/1239/1239525.png" 
           endereco="Endereço: Rua da casa que não tinha teto, 140 - São Paulo" 
           />   
       </div>
