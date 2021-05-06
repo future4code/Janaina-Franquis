@@ -11,8 +11,17 @@ const MainContainer = styled.div`
 
 class App extends React.Component {
   render() {
+    const listaDeNomes = [<p>Maia Fernandes</p>, <p>Ricardo Teixeira</p>, <p>César Augusto</p>,];
+    
     return (
-      <MainContainer>
+      <div>
+        <h1>{listaDeNomes}</h1>
+      </div>
+    );
+  }
+}
+
+/* <MainContainer>
         <Post
           nomeUsuario={"Janaina"}
           fotoUsuario={"https://picsum.photos/50/50"}
@@ -20,19 +29,19 @@ class App extends React.Component {
         />
 
         <Post
-          nomeUsuario={"Janaina"}
-          fotoUsuario={"https://picsum.photos/50/50"}
+          nomeUsuario={"José"}
+          fotoUsuario={"https://picsum.photos/50/5"}
           fotoPost={"https://picsum.photos/200/150"}
         />
 
         <Post
-          nomeUsuario={"Janaina"}
+          nomeUsuario={"Maria Eugênia"}
           fotoUsuario={"https://picsum.photos/50/50"}
           fotoPost={"https://picsum.photos/200/150"}
         />
       </MainContainer>
     );
   }
-}
+}*/
 
 export default App;
