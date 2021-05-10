@@ -1,80 +1,90 @@
-import './App.css';
+import React from "react";
+import "./styles.css";
+import { CardVideo } from "./components/CardVideo";
+import BotaoMenu from "./components/BotaoMenu/BotaoMenu.js";
+import styled from "styled-components";
 
-function App() {
-  const titulo = "Titulo do vídeo"
+const MeuFooter = styled.footer`
+  background: #333b3e;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+`;
 
-  function reproduzVideo() {
-    alert("O vídeo está sendo reproduzido")
+export default function App() {
+  function reproduzVideo(nome) {
+    alert(`O vídeo ${nome} está sendo reproduzido`);
   }
 
   return (
     <div>
-      <header>
-        <h1>Lab Tube</h1>
-        <input type="text" placeholder="Busca" id="campoDeBusca" />
-      </header>
+      <div className="tela-inteira">
+        <header>
+          <h1>LabeTube</h1>
+          <input type="text" placeholder="Busca" id="campoDeBusca" />
+        </header>
 
-      <main>
-        <nav className="menu-vertical">
-          <ul>
-            <li className="botoes-menu-vertical">Início</li>
-            <li className="botoes-menu-vertical">Em alta</li>
-            <li className="botoes-menu-vertical">Inscrições</li>
+        <main>
+          <nav className="menu-vertical">
+            <BotaoMenu textoDoItem={"Início"} />
+            <BotaoMenu textoDoItem={"Em Alta"} />
+            <BotaoMenu textoDoItem={"Inscrições"} />
             <hr />
-            <li className="botoes-menu-vertical">Originais</li>
-            <li className="botoes-menu-vertical">Histórico</li>
-          </ul>
-        </nav>
+            <BotaoMenu textoDoItem={"Biblioteca"} />
+            <BotaoMenu textoDoItem={"Histórico"} />
+          </nav>
 
-        <section className="painel-de-videos">
-          <div className="box-pagina-principal media1" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=1 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media2" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=2 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media3" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=3 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media4" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=4 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media5" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=5 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media6" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=6 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media7" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=7 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-          <div className="box-pagina-principal media8" onClick={reproduzVideo
-          }>
-            <img src="https://picsum.photos/400/400?a=8 " alt="" />
-            <h4>{titulo}</h4>
-          </div>
-        </section>
-      </main>
+          <section className="painel-de-videos">
+            <CardVideo
+              titulo={"Vídeo 1"}
+              imagem={"https://picsum.photos/400/400?a=1"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 2"}
+              imagem={"https://picsum.photos/400/400?a=2"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 3"}
+              imagem={"https://picsum.photos/400/400?a=3"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 4"}
+              imagem={"https://picsum.photos/400/400?a=4"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 5"}
+              imagem={"https://picsum.photos/400/400?a=5"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 6"}
+              imagem={"https://picsum.photos/400/400?a=6"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 7"}
+              imagem={"https://picsum.photos/400/400?a=7"}
+              funcaoClick={reproduzVideo}
+            />
+            <CardVideo
+              titulo={"Vídeo 8"}
+              imagem={"https://picsum.photos/400/400?a=8"}
+              funcaoClick={reproduzVideo}
+            />
+          </section>
+        </main>
 
-      <footer>
-        <h4>Oi! Eu moro no footer!</h4>
-      </footer>
+        <MeuFooter>
+          <h4>Oi! Eu moro no footer!</h4>
+        </MeuFooter>
+      </div>
     </div>
   );
 }
-
-export default App;
