@@ -1,11 +1,11 @@
 import React from "react";
-import "./styles.css";
-import { CardVideo } from "./components/CardVideo";
-import BotaoMenu from "./components/BotaoMenu/BotaoMenu.js";
+import "./style.css";
+import { CardVideo } from "./components/cardVideo/cardVideo";
+import BotaoMenu from "./components/BotaoMenu/BotaoMenu";
 import styled from "styled-components";
 
 const MeuFooter = styled.footer`
-  background: #333b3e;
+  background: red;
   color: white;
   position: fixed;
   bottom: 0;
@@ -29,9 +29,10 @@ export default function App() {
 
         <main>
           <nav className="menu-vertical">
-            <BotaoMenu textoDoItem={"Início"} />
+            <BotaoMenu textoDoItem={"Início"} /> 
             <BotaoMenu textoDoItem={"Em Alta"} />
             <BotaoMenu textoDoItem={"Inscrições"} />
+            
             <hr />
             <BotaoMenu textoDoItem={"Biblioteca"} />
             <BotaoMenu textoDoItem={"Histórico"} />

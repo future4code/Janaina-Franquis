@@ -1,7 +1,10 @@
 import React from "react";
-import "";
+
+
+
 
 export function CardVideo(props) {
+ // retornando JSX
   return (
     <div
       className="box-pagina-principal"
