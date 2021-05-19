@@ -1,45 +1,39 @@
 import React from "react";
+import CadastroUsuario from "./Components/CadastroUsuario";
+import ListaUsuario from "./Components/ListaUsuario";
 import axios from "axios";
 
-const BASE_URL =
-  "https://us-central1-labenu-apis.cloudfunctions.net/labenusers";
 
 export default class App extends React.Component {
-  state = {
-    CadastrarUsuario: [],
-    inputName: "",
-    inputEmail:"",
-    proximaPagina: true
-  };
+ state = {
+   telaAtual: "cadastroUsuario"
+ }
 
-  componentDidMount() {
-    this.postUser();
+ escolherTela = () => {
+   switch (this.state.telaAtual){
+    case "cadastroUsuario":
+      return <CadastroUsuario irListaUsuario={this.irListaUsuario} />
+    case  "listaUsuario":
+      return <ListaUsuario irCadastroUsuario={this.irCadastroUsuario}  />
+    default:
+      return <div>Erro! Página não encontrada. </div>   
   }
+ }
 
-  handleName = (event) => {
-    this.setState({ inputName: event.target.value });
-  };
+ irCadastroUsuario = () =>{
+   this.setState({telaAtual: "cadastroUsuario"})
+ }
 
-  handleEmail = (event) => {
-    this.setState({ inputEmail: event.target.value });
-  };
+ irListaUsuario = () =>{
+  this.setState({telaAtual: "listaUsuario"})
+}
+ 
+  render(){
+      return(
+      <div>
+        {this.escolherTela()}
+      </div>
+    )
 
-  handleClickEnter = (event) => {
-    if (event.keyCode === 13) {
-      this.createUser();
-    }
-  };
-
-  postUser = () =>{
-    const header ={
-      headers:{
-        Authorization: janaina-franquis-paiva
-      }
-    }
-  };
-
-  axios
-  .post(BASE_URL, header, body)
-  
-
+  }
 }
