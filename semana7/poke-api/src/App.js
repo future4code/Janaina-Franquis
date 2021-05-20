@@ -27,6 +27,9 @@ export default class App extends React.Component {
     this.setState({picture:response.data.sprites.front_default})
   };
 
+
+
+  
   render() {
     //console.log("Pokemons no estado:", this.state.pokemons)
     const pokeList = this.state.pokemons.map((poke) => {
