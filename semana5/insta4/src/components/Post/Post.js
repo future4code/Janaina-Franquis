@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
 import { IconeComContador } from "../IconeComContador/IconeComContador";
-
 import iconeCoracaoBranco from "../../img/favorite-white.svg";
 import iconeCoracaoPreto from "../../img/favorite.svg";
 import iconeComentario from "../../img/comment_icon.svg";
@@ -40,7 +38,7 @@ const PostPhoto = styled.img`
   width: 100%;
 `;
 
-class Post extends React.Component {
+export default class Post extends React.Component {
   state = {
     curtido: false,
     numeroCurtidas: 0,
@@ -49,17 +47,17 @@ class Post extends React.Component {
   };
 
   onClickCurtida = () => {
-    let novaCurtida;
-    if (this.state.curtido) {
-      novaCurtida = this.state.numeroCurtidas - 1;
-    } else {
-      novaCurtida = this.state.numeroCurtidas + 1;
-    }
-    //console.log("Curtiu!");
+    let novoNumeroCurtidas;
 
-    this.setState = ({
+    if (this.state.curtido) {
+      novoNumeroCurtidas = this.state.numeroCurtidas - 1;
+    } else {
+      novoNumeroCurtidas = this.state.numeroCurtidas + 1;
+    }
+
+    this.setState({
       curtido: !this.state.curtido,
-      numeroCurtidas: novaCurtida,
+      numeroCurtidas: novoNumeroCurtidas,
     });
   };
 
@@ -75,8 +73,6 @@ class Post extends React.Component {
       numeroComentarios: this.state.numeroComentarios + 1,
     });
   };
-
-
 
   render() {
     let iconeCurtida;
@@ -96,31 +92,36 @@ class Post extends React.Component {
     }
 
     return (
-      <PostContainer>
-        <PostHeader>
-          <UserPhoto src={this.props.fotoUsuario} alt={"Imagem do usuario"} />
+      <div className={"PostContainer"}>
+        <div className={"PostHeader"}>
+          <img
+            className={"UserPhoto"}
+            src={this.props.fotoUsuario}
+            alt={"Imagem do usuario"}
+          />
           <p>{this.props.nomeUsuario}</p>
-        </PostHeader>
+        </div>
 
-        <PostPhoto src={this.props.fotoPost} alt={"Imagem do post"} />
+        <img
+          className={"PostPhoto"}
+          src={this.props.fotoPost}
+          alt={"Imagem do post"}
+        />
 
-        <PostFooter>
+        <div className={"PostFooter"}>
           <IconeComContador
             icone={iconeCurtida}
             onClickIcone={this.onClickCurtida}
             valorContador={this.state.numeroCurtidas}
           />
-
           <IconeComContador
             icone={iconeComentario}
             onClickIcone={this.onClickComentario}
             valorContador={this.state.numeroComentarios}
           />
-        </PostFooter>
+        </div>
         {componenteComentario}
-      </PostContainer>
+      </div>
     );
   }
 }
-
-export default Post;

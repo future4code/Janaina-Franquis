@@ -1,16 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+
 
 const IconContainer = styled.div`
-	display: flex;
-`
+  display: flex;
+`;
 const IconImage = styled.img`
-	margin-right: 5px;
-`
+  margin-right: 5px;
+`;
 
 export function IconeComContador(props) {
-	return <IconContainer>
-		<IconImage alt={'Icone'} src={props.icone} onClick={props.onClickIcone}/>
-		<p>{props.valorContador}</p>
-	</IconContainer>
+  return (
+    <div className={IconContainer}>
+      <img alt={"Icone"} src={props.icone} onClick={props.onClickIcone} />
+      <p>{props.valorContador}</p>
+    </div>
+  );
 }
