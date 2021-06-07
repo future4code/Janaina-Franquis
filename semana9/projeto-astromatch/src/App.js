@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import Home from "./components/Home";
-import Match from "./components/Match";
-import StyledHome from "./components/StyledHome";
-import "../src/App.css";
+import React from 'react';
+import ButtonDeLimpar from './components/Button/ButtonDeLimpar';
+import Main from './components/Main/Main';
+import HomeBar from './components/HomeBar/HomeBar';
+import EscolhaDePerfil from './components/EscolhaDePerfil/EscolhaDePerfil'
+import CardPerfil from './components/EscolhaDePerfil/CardPerfil';
+import ListaDeMatch from './components/ListaDeMatch/ListaDeMatch';
 
-export default function App() {
-  const [paginas, setPaginas] = useState(true);
-
-  const proximaPagina = () => {
-    setPaginas(!paginas);
-  };
-
+function App () {
   return (
     <div>
-      {paginas ? (<Home proximaPagina={proximaPagina}/> ) : (<Match proximaPagina={proximaPagina}/>)}
+      <Main/>
+      <ButtonDeLimpar/>
+      
+      
     </div>
   );
 }
+
+
+export default App
