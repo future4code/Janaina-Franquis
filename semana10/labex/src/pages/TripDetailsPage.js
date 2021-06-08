@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function AdminHomePage() {
+const TripDetailsPage = () => {
     return (
         <div>
             
         </div>
     )
 }
+export default TripDetailsPage;

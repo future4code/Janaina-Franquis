@@ -1,9 +1,12 @@
 import React from 'react'
 
-export default function CreateTripPage() {
+
+ const AdminHomePage = ()  => {
     return (
         <div>
-            CreateTripPage
+            
         </div>
     )
 }
+
+export default AdminHomePage

@@ -1,14 +1,9 @@
-import './App.css';
-import CreateTripPage from './components/CreateTripPage';
-import ListTripPage from './components/ListTripPage';
+import React from "react";
+import Router from "../src/routes/Router";
 
-function App() {
-  return (
-    <div className="App">
-      <ListTripPage />
-      <CreateTripPage />
-    </div>
-  );
-}
+const App = () => {
+  return <Router />;
+  
+};
 
 export default App;
