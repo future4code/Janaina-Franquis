@@ -17,7 +17,7 @@ const Router = () => {
           <HomePage />
         </Route>
 
-        <Route exact path="/trips/list">cdbuild
+        <Route exact path="/trips/list">
           <ListTripPage />
         </Route>
 
