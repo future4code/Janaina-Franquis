@@ -4,30 +4,31 @@ import { goToHomePage, goToAdminHomePage } from "../routes/cordinator";
 import styled from "styled-components";
 
 const ContainerLoginPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 100px;
 
-display: flex;
-flex-direction: column;
-text-align: center;
-margin: auto;
+  h1 {
+    font-size: 40px;
+  }
 
-h1 {
-  font-size: 40px;
-}
+  input {
+    margin: 5px;
+    padding: 5px;
+    width: 250px;
+  }
 
-input{
-  margin: 5px;
-  
-}
-
-
-
-`
-
-
-
-
-
-
+  button {
+    margin: 5px;
+    padding: 5px;
+    color: red;
+    font-size: 15px;
+    border-radius: 15px;
+    width: 100px;   
+  }
+`;
 
 const LoginPage = () => {
   const history = useHistory();
