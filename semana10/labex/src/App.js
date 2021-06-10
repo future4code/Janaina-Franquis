@@ -1,14 +1,28 @@
 import React from "react";
 import Router from "../src/routes/Router";
-import ListTripPage from "../src/pages/ListTripPage";
+import styled from "styled-components";
+
+
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+`
+
+
+
+
 
 const App = () => {
   return (
-    <div>
+    <AppContainer>
+
       <Router />
 
       
-    </div>
+    </AppContainer>
   );
 };
 

@@ -1,29 +1,21 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { goToAdminHome, goToCreateTripPage } from "../routes/cordinator";
 
- const CreateTripPage = () =>  {
+const CreateTripPage = () => {
+  const history = useHistory();
 
-    const history = useHistory();
+  return (
+    <div>
+      <h1>Criar Viagem </h1>
+      <p></p>
+      <button onClick={() => goToAdminHome (history)}>Voltar</button>
+      <button onClick={() => goToCreateTripPage (history)}>Criar</button>
 
-    const goToAdminHome = () =>{
-        history.push("/admin/trips/create")
-    }
-
-    const goToCreateTripPage =() => {
-        history.push("/admin/trips/create")
-    }
-    
-
-
-
-    return (
-        <div>
-            <h1>Criar Viagem </h1>
-            <p></p>
-            <button onClick={goToAdminHome}>Voltar</button>
-            <button onClick={goToCreateTripPage}>Criar</button>
-           
-        </div>
-    )
-}
+    <h2>Lista de Viagens</h2>
+      <input>
+      </input>
+    </div>
+  );
+};
 export default CreateTripPage;
