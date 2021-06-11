@@ -17,14 +17,10 @@ const ApplicationFormPage = () => {
         de inscrição
       </p>
 
-    <ContainerInput>
-      
-
-
-    </ContainerInput>
+ 
 
       <button onClick={() => goToListTripPage (history)}>Voltar</button>
-      <button onClick={() => goToLoginPage(history)}></button>
+      <button onClick={() => goToLoginPage(history)}>Enviar</button>
       <button>Enviar</button>
     </div>
   );

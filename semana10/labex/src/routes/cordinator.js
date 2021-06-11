@@ -25,3 +25,7 @@ export const goToApplicationForm = (history) => {
 export const goToAdminHomePage = (history) => {
   history.push("/admin/trips/create");
 };
+
+export const goToTripDetailsPage = (history) => {
+  history.push("/admin/trips/:id")
+}

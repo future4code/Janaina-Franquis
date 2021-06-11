@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToHomePage, goToCreateTripPage } from "../routes/cordinator";
-import styled from "styled-components";
+import { goToHomePage, goToTripDetailsPage } from "../routes/cordinator";
+
 
 
 
@@ -19,7 +19,7 @@ const AdminHomePage = () => {
         acessar o detalhe de cada uma delas
       </p>
       <button onClick={() => goToHomePage(history)}>Voltar</button>
-      <button onClick={() => goToCreateTripPage(history)}>Criar Viagem</button>
+      <button onClick={() => goToTripDetailsPage(history)}>Criar Viagem</button>
       <button> Logout </button>
     </div>
   );
