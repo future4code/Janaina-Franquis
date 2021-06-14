@@ -1,9 +1,10 @@
-export const goToListTripPage = (history) => {
-  history.push("/trips/list");
-};
+
 
 export const goToLoginPage = (history) => {
   history.push("/login");
+};
+export const goToListTripPage = (history) => {
+  history.push("/trips/list");
 };
 
 export const goToHomePage = (history) => {

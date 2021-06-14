@@ -5,33 +5,24 @@ import axios from "axios";
 import { goToHomePage } from "../routes/cordinator";
 import useInput from "../hooks/useInput";
 import { BASE_URL } from "../constants/url";
-
+import { Button } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import TextField from "@material-ui/core/TextField";
 
 const ContainerLoginPage = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  padding: 100px;
+`;
 
-  h1 {
-    font-size: 40px;
-  }
+const ButtonContainer = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 25px;
+`;
 
-  input {
-    margin: 5px;
-    padding: 5px;
-    width: 250px;
-  }
-
-  button {
-    margin: 5px;
-    padding: 5px;
-    color: red;
-    font-size: 15px;
-    border-radius: 15px;
-    width: 100px;
-  }
+const LoginForm = styled.form`
+  display: grid;
+  gap: 10px;
 `;
 
 const LoginPage = () => {
@@ -48,27 +39,53 @@ const LoginPage = () => {
 
     axios
       .post(`${BASE_URL}/login`, body)
-      .then((response) => {// console.log(response);
-         localStorage.setItem("token", response.data.token)
-         history.push("/admin/trips/:id")
+      .then((response) => {
+        // console.log(response);
+        localStorage.setItem("token", response.data.token);
+        history.push("/admin/trips/:id");
       })
-      .catch((err) => 
+      .catch((err) =>
         //console.log(err.response.data);
-        alert(err.response.data.message));
+        alert(err.response.data.message)
+      );
   };
 
   return (
     <ContainerLoginPage>
-      <h1>Login</h1>
-      <input value={email} onChange={mudaEmail} placeholder="E-mail" />
-      <input
-        type="password"
-        value={password}
-        onChange={mudaPassword}
-        placeholder="Senha"
-      />
-      <button onClick={() => goToHomePage(history)}>Voltar</button>
-      <button onClick={onClickLogin}>Entrar</button>
+      <Typography variant="h1" align="center" gutterBottom>
+        LabeX
+      </Typography>
+      <LoginForm>
+        <TextField
+          label={"E-mail"}
+          value={email}
+          onChange={mudaEmail}
+        
+        />
+        <TextField
+          label={"Password"}
+          type="password"
+          value={password}
+          onChange={mudaPassword}
+        />
+        <ButtonContainer>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => goToHomePage(history)}
+          >
+            Voltar
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            type={"submit"}
+            onClick={onClickLogin}
+          >
+            Entrar
+          </Button>
+        </ButtonContainer>
+      </LoginForm>
     </ContainerLoginPage>
   );
 };

@@ -20,7 +20,7 @@ const Router = () => {
         <Route exact path="/login">
           <LoginPage />
         </Route>
-
+        
         <Route exact path="/trips/list">
           <ListTripPage />
         </Route>
@@ -29,12 +29,11 @@ const Router = () => {
           <ApplicationFormPage />
         </Route>
 
-
-        <Route exact path="/admin/trips/list">
+        <Route exact path="/admin/trips/create">
           <CreateTripPage />
         </Route>
 
-        <Route exact path="/admin/trips/create">
+        <Route exact path="/admin/trips/list">
           <AdminHomePage />
         </Route>
 
@@ -45,7 +44,6 @@ const Router = () => {
         <Route>
           <Error />
         </Route>
-
       </Switch>
     </BrowserRouter>
   );

@@ -1,35 +1,47 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { goToListTripPage, goToLoginPage } from "../routes/cordinator";
+import Typography from "@material-ui/core/Typography";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
 
-const MainContainer = styled.div`
+
+const ContainerHomePage = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
-
-  h1 {
-    font-family: sans-serif;
-    font-size: 100px;
-  }
-
-  button {
-    margin: 5px;
-    padding: 10px;
-    color: red;
-    font-size: 15px;
-    border-radius: 20px;
-  }
+  margin: auto;
+  padding: 250px;
 `;
+
+const ButtonContainer = styled.div`
+display: grid;
+grid-auto-flow: column;
+gap:25px;
+`;
+
 
 const HomePage = () => {
   const history = useHistory();
   return (
-    <MainContainer>
-      <h1>LabeX</h1>
-      <button onClick={() => goToListTripPage(history)}>Ver Viagens</button>
-      <button onClick={() => goToLoginPage(history)}>Área de Admin</button>
-    </MainContainer>
+    <ContainerHomePage>
+      <Typography variant="h1" align="center" gutterBottom>LabeX</Typography>
+      <ButtonContainer>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => goToListTripPage(history)}
+        >
+          Ver Viagens
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => goToLoginPage(history)}
+        >
+          Área de Admin
+        </Button>
+      </ButtonContainer>
+    </ContainerHomePage>
   );
 };
 export default HomePage;
