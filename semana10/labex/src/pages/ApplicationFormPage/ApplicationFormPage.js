@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToListTripPage, goToLoginPage } from "../routes/cordinator";
+import { goToListTripPage, goToLoginPage } from "../../routes/cordinator";
 
 const ApplicationFormPage = () => {
   const history = useHistory();

@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router";
-import { goToHomePage, goToApplicationForm } from "../src/routes/cordinator";
-import useInput from "../hooks/useInput";
+import { goToHomePage, goToApplicationForm } from "../../routes/cordinator";
+import useInput from "../../hooks/useInput";
 import { Button } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
-import { goToCreateTripPage } from "../routes/cordinator";
+import { goToCreateTripPage } from "../../routes/cordinator";
 import ListItem from "@material-ui/core/ListItem";
-import TripDetailsPage from "./TripDetailsPage";
+import TripDetailsPage from "../TripDetailsPage/TripDetailsPage";
 
 const ContainerListTripPage = styled.div`
   display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToHomePage, goToTripDetailsPage } from "../routes/cordinator";
+import { goToHomePage, goToTripDetailsPage } from "../../routes/cordinator";
 
 
 

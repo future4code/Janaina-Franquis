@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToAdminHome, goToCreateTripPage } from "../routes/cordinator";
+import { goToAdminHome, goToCreateTripPage } from "../../routes/cordinator";
 import styled from "styled-components";
 
 const ContainerTripPage = styled.div`

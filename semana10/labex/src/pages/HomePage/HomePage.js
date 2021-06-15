@@ -1,23 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { goToListTripPage, goToLoginPage } from "../routes/cordinator";
+import { goToListTripPage, goToLoginPage } from "../../routes/cordinator";
 import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
-import styled from "styled-components";
+import { ContainerHomePage } from "../HomePage/styled";
 
 
-const ContainerHomePage = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 250px;
-`;
-
-const ButtonContainer = styled.div`
-display: grid;
-grid-auto-flow: column;
-gap:25px;
-`;
 
 
 const HomePage = () => {

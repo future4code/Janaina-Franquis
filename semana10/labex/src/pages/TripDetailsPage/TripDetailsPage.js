@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { BASE_URL } from "../constants/url";
+import { BASE_URL } from "../../constants/url";
 
 const TripDetailsPage = () => {
     const history = useHistory();
