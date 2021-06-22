@@ -2,7 +2,7 @@ export const goToLoginPage = (history) => {
   history.push("/login");
 };
 
-export const goToFeedbackPage = (history) => {
+export const goToFeedPage = (history) => {
   history.push("/");
 };
 

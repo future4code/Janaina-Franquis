@@ -1,5 +1,7 @@
 import React from "react";
 import Router from "./Routes/Router"
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "./constants/theme";
 
 
 
@@ -7,10 +9,11 @@ import Router from "./Routes/Router"
 
 const App = () => {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
+
       <Router />
 
-    </div>
+    </ThemeProvider>
    
   )
 }
