@@ -18,11 +18,11 @@ const Router = () => {
           <CadastroPage />
         </Route>
 
-        <Route exact path="/feed">
+        <Route exact path="/">
           <FeedPage />
         </Route>
 
-        <Route exact path="/post">
+        <Route exact path="/adicionar-post">
           <PostPage />
         </Route>
 
