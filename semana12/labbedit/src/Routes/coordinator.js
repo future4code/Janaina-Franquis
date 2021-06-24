@@ -3,7 +3,7 @@ export const goToLoginPage = (history) => {
 };
 
 export const goToFeedPage = (history) => {
-  history.push("/");
+  history.push("/feeds");
 };
 
 export const goToCadastroPage = (history) => {
@@ -12,4 +12,8 @@ export const goToCadastroPage = (history) => {
 
 export const goToPostPage = (history) => {
   history.push("/adicionar-post");
+};
+
+export const goToHomePage = (history) => {
+  history.push("/");
 };
