@@ -15,7 +15,7 @@ export const StyledTextField = styled(TextField)`
   display: grid;
   margin-top: 1rem;
   margin-inline: auto;
-  width: 40%;
+  width: 30%;
   padding: 1rem;
 `;
 
@@ -23,5 +23,5 @@ export const StyledButton = styled(Button)`
   margin: 1rem;
   margin-top: 3rem;
   width:8%;
-  left: 35%;
+  left: 43.5rem;
 `;

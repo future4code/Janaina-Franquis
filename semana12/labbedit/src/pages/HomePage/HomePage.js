@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <NomePage>
-        <h1>LabbEdit</h1>
+        <h1>LabEddit</h1>
       </NomePage>
       <ImgHome>
         <img src={Logo} alt="Logo LabbEdit" />
