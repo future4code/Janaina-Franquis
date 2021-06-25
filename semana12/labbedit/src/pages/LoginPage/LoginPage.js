@@ -1,5 +1,5 @@
 import React from "react";
-import { PageContainer, InputsContainer, ButtonContainer } from "./styled";
+import { PageContainer, InputsContainer } from "./styled";
 import { useHistory } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -10,53 +10,55 @@ const LoginPage = () => {
   const history = useHistory();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
-  const onSubmitForm = (e) => { e.preventDefault();};
- 
+  const onSubmitForm = (e) => {
+    console.log(form)
+    e.preventDefault();
+  };
 
   return (
     <PageContainer>
       <h2>LOGIN</h2>
 
       <InputsContainer>
-        <form onSubmit={onSubmitForm}></form>
-        <TextField
-          name={"email"}
-          type={"email"}
-          value={form.email}
-          onChange={onChange}
-          label={"E-mail"}
-          variant={"filled"}
-          margin={"normal"}
-          required
-        />
+        <form onSubmit={onSubmitForm}>
+          <TextField
+            name={"email"}
+            type={"email"}
+            value={form.email}
+            onChange={onChange}
+            label={"E-mail"}
+            variant={"filled"}
+            margin={"normal"}
+            fullWidth
+            required
+          />
 
-        <TextField
-          name={"password"}
-          type={"password"}
-          value={form.password}
-          onChange={onChange}
-          label={"Senha"}
-          variant={"filled"}
-          margin={"normal"}
-          required
-        />
+          <TextField
+            name={"password"}
+            type={"password"}
+            value={form.password}
+            onChange={onChange}
+            label={"Senha"}
+            variant={"filled"}
+            margin={"normal"}
+            fullWidth
+            required
+          />
+
+          <Button type={"submit"} variant={"contained"} color={"secondary"}>
+            Entrar
+          </Button>
+
+          <Button
+            onClick={() => goToCadastroPage(history)}
+            variant={"text"}
+            color={"secondary"}
+          >
+            Cadastrar
+          </Button>
+        </form>
       </InputsContainer>
-
-      <ButtonContainer>
-        <Button type={"submit"} variant={"contained"} color={"secondary"}>
-          Entrar
-        </Button>
-
-        <Button
-          onClick={() => goToCadastroPage(history)}
-          variant={"contained"}
-          color={"secondary"}
-        >
-          Cadastrar
-        </Button>
-       
-      </ButtonContainer><p>Não tem conta? Cadastre-se</p> 
-    </PageContainer> 
+    </PageContainer>
   );
 };
 

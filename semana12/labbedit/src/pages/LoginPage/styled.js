@@ -20,12 +20,5 @@ export const InputsContainer = styled.div`
   padding: 1rem;
 `;
 
-export const ButtonContainer = styled.div`
-display: flex;
-justify-content: space-around;
-margin-inline: auto;
-width: 30%;
-  
-`;
 
 
