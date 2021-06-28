@@ -5,7 +5,7 @@ import React from "react";
 const ErrorPage = () => {
   return (
     <div>
-      Erro de Página
+      Página não encontrada!
     </div>
    
   )

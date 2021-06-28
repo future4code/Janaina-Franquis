@@ -7,7 +7,7 @@ import { useUnprotectedPage } from "../../Hooks/useUnprotectedPage";
 
 const FeedPage = () => {
   useUnprotectedPage()
-  useUnprotectedPage()
+  useProtectedPage()
   return (
     <div>
       <h1>FeedPage</h1>

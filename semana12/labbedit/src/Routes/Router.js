@@ -1,28 +1,28 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import CadastroPage from "../pages/CadastroPage/CadastroPage";
 import FeedPage  from "../pages/FeedPage/FeedPage";
 import PostPage from "../pages/PostPage/PostPage";
 import HomePage from "../pages/HomePage/HomePage"
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import { Header } from "../components/Header/Header";
 
-const Router = () => {
+
+const Router = ({ setRightButtonText}) => {
   return (
-    <BrowserRouter>
-    <Header />
+    
+    
       <Switch>
         <Route exact path="/">
           <HomePage />
         </Route>
 
         <Route exact path="/login">
-          <LoginPage />
+          <LoginPage setRightButtonText={setRightButtonText}/>
         </Route>
 
         <Route exact path="/cadastro">
-          <CadastroPage />
+          <CadastroPage setRightButtonText={setRightButtonText}/>
         </Route>
 
         <Route exact path="/feeds">
@@ -37,7 +37,7 @@ const Router = () => {
             <ErrorPage />
         </Route>
       </Switch>
-    </BrowserRouter>
+    
   );
 };
 

@@ -7,14 +7,14 @@ import { goToCadastroPage } from "../../Routes/coordinator";
 import { useForm } from "../../Hooks/useForm";
 import { login } from "../../services/user";
 
-const LoginPage = () => {
+const LoginPage = ({setRightButtonText}) => {
   const history = useHistory();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
   const onSubmitForm = (e) => {
     // console.log(form);
     e.preventDefault();
-    login(form, clear, history);
+    login(form, clear, history, setRightButtonText);
   };
 
   return (
@@ -22,7 +22,10 @@ const LoginPage = () => {
       <h2>LOGIN</h2>
 
       <InputsContainer>
-        <form onSubmit={onSubmitForm}>
+        <form onSubmit={onSubmitForm} setRightButtonText={setRightButtonText}>
+          
+        
+          
           <TextField
             name={"email"}
             type={"email"}
@@ -45,7 +48,7 @@ const LoginPage = () => {
             margin={"normal"}
             fullWidth
             required
-          />
+           />
 
           <Button type={"submit"} variant={"contained"} color={"secondary"}>
             Entrar

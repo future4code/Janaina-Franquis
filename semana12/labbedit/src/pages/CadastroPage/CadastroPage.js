@@ -8,41 +8,34 @@ import { useForm } from "../../Hooks/useForm";
 import { cadastroPage } from "../../services/user";
 
 
-const CadastroPage = () => {
+const CadastroPage = (setRightButtonText) => {
   const history = useHistory();
-  const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-
-  
-
-  
   const [form, onChange, clear] = useForm({
-    email: email,
-    password: password,
-    username: username
+    username:"",
+    email: "",
+    password: ""
   });
 
   
   const onSubmitForm = (e) => {
-    console.log(form)
+   // console.log(form)
     e.preventDefault();
-    cadastroPage(form, clear, history)
+    cadastroPage(form, clear, history, setRightButtonText)
   };
 
   return (
     <PageContainer>
       <h2>CADASTRO</h2>
       <InputsContainer>
-        <form onSubmit={onSubmitForm}>
+        <form onSubmit={onSubmitForm} setRightButtonText={setRightButtonText}>
           <TextField
             id="filled-basic"
             label="Nome"
-            name={'name'}
-            value={form.name} 
+            name={'username'}
+            value={form.username} 
             onChange={onChange}
             variant="filled"
-            type={"name"}
+            type={"username"}
             required
             fullWidth
             margin={"normal"}
