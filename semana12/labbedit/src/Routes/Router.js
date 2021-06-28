@@ -25,7 +25,7 @@ const Router = () => {
           <CadastroPage />
         </Route>
 
-        <Route exact path="/feed">
+        <Route exact path="/feeds">
           <FeedPage />
         </Route>
 

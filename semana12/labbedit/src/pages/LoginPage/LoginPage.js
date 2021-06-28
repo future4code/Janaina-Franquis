@@ -5,14 +5,16 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { goToCadastroPage } from "../../Routes/coordinator";
 import { useForm } from "../../Hooks/useForm";
+import { login } from "../../services/user";
 
 const LoginPage = () => {
   const history = useHistory();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
   const onSubmitForm = (e) => {
-    console.log(form)
+    // console.log(form);
     e.preventDefault();
+    login(form, clear, history);
   };
 
   return (
