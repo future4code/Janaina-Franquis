@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import CadastroPage from "../pages/CadastroPage/CadastroPage";
-import FeedPage  from "../pages/FeedPage/FeedPage";
+import { FeedPage }  from "../pages/FeedPage/FeedPage";
 import PostPage from "../pages/PostPage/PostPage";
 import HomePage from "../pages/HomePage/HomePage"
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
