@@ -39,4 +39,3 @@ function sum (
     ) : number {
         return a + b
     }
-//1:30:08
