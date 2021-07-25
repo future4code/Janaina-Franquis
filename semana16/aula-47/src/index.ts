@@ -3,11 +3,12 @@ import connection from './password/connection';
 
 app.get("/", async (req, res) => {
     try {
-        const result = await connection.raw(`
-        SELECT * FROM Actor
-        `)
+        // const result = await connection.raw(`
+        // SELECT * FROM Actor
+        // `)
+        const result = await connection("Actor")
 
-        res.status(200).send(result[0])
+        res.status(200).send(result)
 
     } catch (error) {
         res.status(400).send(error.sqlMessage || error.message);
