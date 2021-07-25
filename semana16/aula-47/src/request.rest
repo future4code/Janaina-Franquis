@@ -6,10 +6,10 @@ POST  http://localhost:3003/actor
 content-type: application/json
 
 {
-    "name": "Maria Joaquina",
-    "salary": 300000,
-    "birth_date": "1997-08-15",
-    "gender": "female"
+    "name": "Diego Araujo",
+    "salary": 250000,
+    "birth_date": "2013-03-15",
+    "gender": "male"
 }
 
 ###
@@ -26,5 +26,5 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:3003/actor/1627251498244
+DELETE http://localhost:3003/actor/16272514982
 content-type: application/json
