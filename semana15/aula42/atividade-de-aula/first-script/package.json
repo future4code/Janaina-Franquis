@@ -1,0 +1,13 @@
+{
+  "name": "first-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "ex6": "tsc && node build/exercicio6.js"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
