@@ -1,0 +1,30 @@
+GET http://localhost:3003
+
+###
+
+POST  http://localhost:3003/actor
+content-type: application/json
+
+{
+    "name": "Maria Joaquina",
+    "salary": 300000,
+    "birth_date": "1997-08-15",
+    "gender": "female"
+}
+
+###
+
+PUT  http://localhost:3003/actor/1627248845072
+content-type: application/json
+
+{
+    "name": "Ana Paula",
+    "salary": 600000,
+    "birth_date": "1978-02-11",
+    "gender": "female"
+
+}
+
+###
+DELETE http://localhost:3003/actor/1627251158889
+content-type: application/json
