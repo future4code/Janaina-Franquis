@@ -1,17 +1,58 @@
 import { app } from './app';
 import connection from './passaword/connection';
 
+type User = {
+    name: string,
+    nickname: string,
+    email: string
+}
+
+type Task = {
+    title: string,
+    description: string,
+    limitDate: string,
+    creatorUserId: number
+}
+
 
 // criar usuário
 app.post("/user", async (req, res) => {
     try {
-        res.status(200).send("Usuário criado com sucesso!")
+        const reqBody = req.body
+        try {
+            if (!reqBody.name || !reqBody.nickname || !reqBody.email) {
+                res.status(400).send('Preencher todos os campos!!')
+            }
 
-    } catch (error) {
-        res.status(400).send(error.sqlMessage || error.message);
+            const newUser: User = {
+                name: reqBody.name,
+                nickname: reqBody.nickname,
+                email: reqBody.email
+            }
 
+            await connection('TodoListUser').insert(newUser)
+            res.status(200).send(`User ${newUser.name} Criado com sucesso!`)
+
+
+        } catch (error) {
+            res.status(400).send(error.sqlMessage || error.message);
+
+        }
     }
 })
+
+
+// Criar tarefa
+app.post("/user", async (req, res) => {
+    const reqBody = req.Body
+
+    
+    
+})
+
+
+
+
 
 
 // pegar usuário

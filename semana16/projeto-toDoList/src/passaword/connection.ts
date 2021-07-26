@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
-const connection = knex({ // Estabelece conexão com o banco
+
+// Estabelece conexão com o banco
+const connection = knex({ 
     client: "mysql",
     connection: {
     host: process.env.DB_HOST,
