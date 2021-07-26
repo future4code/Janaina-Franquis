@@ -1,14 +1,11 @@
 import { app } from './app';
 import connection from './passaword/connection';
 
-app.get("/user", async (req, res) => {
-    try {
-        const result = await connection.raw(`
-        SELECT * FROM Actor
-        `)
-       
 
-        res.status(200).send(result)
+// criar usuário
+app.post("/user", async (req, res) => {
+    try {
+        res.status(200).send("Usuário criado com sucesso!")
 
     } catch (error) {
         res.status(400).send(error.sqlMessage || error.message);
@@ -17,8 +14,25 @@ app.get("/user", async (req, res) => {
 })
 
 
-//requisição 
-app.post("/actor", async (req, res) => {
+// pegar usuário
+app.get("/user/:id", async (req, res) => {
+    try {
+        res.status(200).send("Sucesso!")
+
+    } catch (error) {
+        res.status(400).send(error.sqlMessage || error.message);
+
+    }
+})
+
+
+
+
+
+
+
+//requisição Pegar usuário
+app.post("/user/:id", async (req, res) => {
     try {
         await connection.raw(`
         INSERT INTO Actor
@@ -39,9 +53,9 @@ app.post("/actor", async (req, res) => {
     }
 })
 
-//requisição para atualizar
+//requisição para editar usuário
 
-app.put('/actor/:id', async (req, res) => {
+app.put('/user/edit/:id', async (req, res) => {
     try {
         await connection("Actor")
             .update({
@@ -58,13 +72,19 @@ app.put('/actor/:id', async (req, res) => {
     }
 })
 
+
+
+
+
+
+
 // requisição para deletar
-app.delete('/actor/:id', async (req, res) => {
+app.delete('/user/:id', async (req, res) => {
     try {
         await connection("Actor")
-        .delete()
-        .where({id: req.params.id})
-        
+            .delete()
+            .where({ id: req.params.id })
+
         res.send("Dado deletado com sucesso!")
 
     } catch (error) {

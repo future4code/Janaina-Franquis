@@ -1,0 +1,15 @@
+
+POST  http://localhost:3003/user
+content-type: application/json
+
+{
+    "name": "Janaina",
+	"nickname": "Jfranquis",
+	"email": "janaina@email.com"
+}
+
+###
+
+GET http://localhost:3003/user/:id
+
+
