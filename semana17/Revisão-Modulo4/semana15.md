@@ -19,6 +19,6 @@
     ○ Headers, Body; Path e Query params;
 
 ● APIs REST
-○ Conceito de REST;
-○ Entidades;
-○ Métodos
+    ○ Conceito de REST;
+    ○ Entidades;
+    ○ Métodos
