@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import connection from "../../connection";
+import connection from "../connection";
 import { CharacterDatabase } from "../database/CharacterDatabase";
-import { Character } from "../entities/Character";
+import { Character } from "../entities/Character"
 
 export default async function getAllCharacters(
   req: Request,

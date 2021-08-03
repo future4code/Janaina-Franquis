@@ -1,7 +1,7 @@
-import { character } from '../../types';
+import { character } from '../types';
 
 import { Request, Response } from "express";
-import connection from "../../connection";
+import connection from "../connection";
 import { Character } from "../entities/Character";
 
 export default async function getCharacterById(
