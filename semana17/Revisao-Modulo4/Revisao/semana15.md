@@ -4,7 +4,12 @@
 
 ● Node e Package.json
     ○ Conceito de node;
+      - O node é um runtime, isto é, um ambiente de execução de 
+        Javascript que roda no terminal do computador, permitindo que 
+        seu uso transcenda os navegadores.
+
     ○ NPM;
+    
     ○ Adicionar dependências;
     ○ preencher o package.json
 
