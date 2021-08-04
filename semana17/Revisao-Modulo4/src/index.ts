@@ -1,7 +1,8 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 
-const message = chalk.green("Hello World!");
-
+let message: string | number = chalk.green("Hello World!");
+message = 39
 
 console.log(message);
+
