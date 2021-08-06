@@ -18,13 +18,10 @@ app.post('/purchase', postCreatePurchase)
 
 
 //listar usuários, produtos, viagens e compras
-
 app.get('/user', getListUsers)
 app.get('/product', getListProducts)
 app.get('/trip', getListTrips)
 app.get('/purchase', getListPurchases)
-
-
 
 
 //listar todas as compras de um usuário.
