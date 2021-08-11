@@ -1,0 +1,15 @@
+{
+  "name": "atividade-da-aula41",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
+  }
+}

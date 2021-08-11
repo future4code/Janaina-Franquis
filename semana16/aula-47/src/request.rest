@@ -1,0 +1,30 @@
+GET http://localhost:3003
+
+###
+
+POST  http://localhost:3003/actor
+content-type: application/json
+
+{
+    "name": "Diego Araujo",
+    "salary": 250000,
+    "birth_date": "2013-03-15",
+    "gender": "male"
+}
+
+###
+
+PUT  http://localhost:3003/actor/1627248845072
+content-type: application/json
+
+{
+    "name": "Ana Paula",
+    "salary": 600000,
+    "birth_date": "1978-02-11",
+    "gender": "female"
+
+}
+
+###
+DELETE http://localhost:3003/actor/16272514982
+content-type: application/json

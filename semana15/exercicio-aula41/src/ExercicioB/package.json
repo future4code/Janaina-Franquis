@@ -1,0 +1,11 @@
+{
+  "name": "exerciciob",
+  "version": "1.0.0",
+  "description": "exercicios aula 41",
+  "main": "exercicioB.js",
+  "scripts": {
+    "start": "node src/exercicioB"
+  },
+  "author": "",
+  "license": "ISC"
+}
