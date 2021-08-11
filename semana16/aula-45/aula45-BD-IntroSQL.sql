@@ -33,3 +33,4 @@ SELECT idade, nome
 FROM professores_labenu
 WHERE idade = 8 ; -- Pesquisar por nome,id ...
 
+
