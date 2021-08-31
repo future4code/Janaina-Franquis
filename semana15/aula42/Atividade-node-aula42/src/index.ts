@@ -5,6 +5,20 @@
 let meuNumero: number | string = 10
 
 //1.C 
+type person = {
+    name: string,
+    age: number
+    corFavorita: string,
+}
+
+const nelson: person = {
+    name: "Nelson",
+    age: 76,
+    corFavorita: branco
+}
+
+
+
 //1.D
 enum RAINBOW_COLORS {
     RED = "Red",
