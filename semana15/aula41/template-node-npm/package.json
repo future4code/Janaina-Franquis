@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "clear && node ./index.js",
-    "search-country-by-name": "clear && echo “Hello” && node ./index.js"
+    "start": "clear && node ./src/index.js",
+    "search-country-by-name": "clear && echo “Hello” && node ./src/searchCountryByName.js"
   },
   "keywords": [],
   "author": "",
