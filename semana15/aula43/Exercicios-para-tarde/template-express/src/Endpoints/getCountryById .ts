@@ -4,7 +4,11 @@ import { countries } from "../data"
 export const gellCountryById =(
     req: Request,
     res: Response,
-) : void => {
+    
+) => {
+    const result = countries.map((country: country) => {
+        return { id: country.id, name: country.name };
+      });
 
     
 }

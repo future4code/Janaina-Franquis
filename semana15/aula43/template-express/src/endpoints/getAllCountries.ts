@@ -10,6 +10,6 @@ export const getAllCountries = (
 
     console.log(req.headers, req.query)
     res.statusMessage = "Mensagem customizada"
-    res.send(countries)
+    res.send(countries) // envia body de resposta
 
 }
