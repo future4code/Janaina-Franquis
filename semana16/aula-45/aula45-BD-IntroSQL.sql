@@ -18,5 +18,3 @@ VALUES
 INSERT INTO professores_labenu
 VALUES (3, "Ghael Luz", "ghael@email.com.br", 8);
 
--- Deleta valores
-DELETE FROM professores_labenu;
