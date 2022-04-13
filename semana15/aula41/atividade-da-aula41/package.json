@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "add": "node ./index.js",
+    "sub": "node ./index.js",
+    "mult": "node ./index.js",
+    "div": "node ./index.js"
   },
   "author": "",
   "license": "ISC",
@@ -11,5 +15,8 @@
   "description": "",
   "devDependencies": {
     "ts-node-dev": "^1.1.8"
+  },
+  "dependencies": {
+    "switch-case": "^2.1.4"
   }
 }
