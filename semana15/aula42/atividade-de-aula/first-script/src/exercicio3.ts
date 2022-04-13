@@ -1,28 +1,30 @@
-type carro = {
-    marca: string,
+import { MARCAS_DE_CARROS } from "./exercicio6"
+
+export type carro = {
+    marca: MARCAS_DE_CARROS
     volumeDoTaque: number,
     temMotorFlex: boolean,
 }
 
 
 const mustang: carro = {
-    marca: "Ford",
+    marca: MARCAS_DE_CARROS.FORD,
     volumeDoTaque: 61,
     temMotorFlex: false
 }
 
 const gol: carro = {
-    marca: "VolksWagem",
+    marca: MARCAS_DE_CARROS.VOLKSWAGEM,
     volumeDoTaque: 55,
     temMotorFlex: true
 }
 
 const onix: carro = {
-    marca: "General Motors",
+    marca: MARCAS_DE_CARROS.GENERAL_MOTORS,
     volumeDoTaque: 60,
     temMotorFlex: true
 }
 
 // criar array
 
-const garagem: carro[]=  [mustang, gol, onix]
+export const garagem: carro[]=  [mustang, gol, onix]

@@ -18,18 +18,3 @@ VALUES
 INSERT INTO professores_labenu
 VALUES (3, "Ghael Luz", "ghael@email.com.br", 8);
 
--- Deleta valores
-DELETE FROM professores_labenu
-WHERE id > 1;
-
-TRUNCATE TABLE professores_labenu; -- DELETAR PERMANENTEMENTE
-
-SHOW TABLES; -- MOSTRA TODAS AS TABELAS CRIADAS
-
-DESCRIBE professores_labenu; -- CONSULTAR A ESTUTURA DA TABELA
-
--- PEGAR DADOS DA TABELA 
-SELECT idade, nome 
-FROM professores_labenu
-WHERE idade = 8 ; -- Pesquisar por nome,id ...
-
