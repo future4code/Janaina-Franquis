@@ -44,9 +44,7 @@ app.post("/user", async (req, res) => {
 
 // Criar tarefa
 app.post("/user", async (req, res) => {
-    const reqBody = req.Body
-
-    
+   
     
 })
 

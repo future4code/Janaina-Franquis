@@ -1,0 +1,19 @@
+GET http://localhost:3003/character?name=u&page=1
+
+###
+
+GET http://localhost:3003/character/2
+###
+
+PUT http://localhost:3003/character
+Content-Type: application/json
+
+{
+   "name":"Snuffles",
+   "gender":"MALE",
+   "description":"O cachorrinho dominador do mundo"
+}
+
+###
+
+DELETE http://localhost:3003/character/3
